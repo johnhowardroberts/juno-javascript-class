@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeCoffee() {
+            // this console log will not load because we haven't called it yet. We need to call the function outside.
+            console.log('hello world');
+        }
+        //call it here 
+        makeCoffee();
+
+        const makeSomeCoffee = function() {
+            console.log('hello world');
+        }
+
+        makeSomeCoffee();
+
+        // arrow functions 
+
+        const makeMoreCoffee = (coffeeType, numOfSugars) => {
+            console.log(`I've made a ${coffeeType} with ${numOfSugars} sugars`);
+        }
+
+        makeMoreCoffee('americano', 3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✊🏽, 🤚🏿, ✌🏼</title>
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors Battle!</h1>
+    <p>Open up your console to see the results!</p>
+
+    <script>
+        // Level 1️⃣ Implementation
+
+        // Declare a variable named `playerChoice` and another variable named `computerChoice`
+        let playerChoice;
+        let computerChoice;
+
+        // Assign a value of 'rock', 'paper' or 'scissors' to both variables
+        playerChoice = 'rock';
+        computerChoice = 'paper';
+
+        // Using if/else conditional statements, check whether the player has won, lost or tied against the computer and log out the results of the match to the console
+        if (playerChoice === computerChoice) {
+            console.log('tie game!');
+        } else if (playerChoice === 'rock') {
+            if (computerChoice === 'scissors') {
+                console.log('rock crushes scissors!');
+            }
+            if (computerChoice === 'paper') {
+                console.log('paper covers rock!');
+            }
+        } else if (playerChoice === 'scissors') {
+            if (computerChoice === 'rock') {
+                console.log('rock crushes scissors!');
+            }
+            if (computerChoice === 'paper') {
+                console.log('scissors cuts paper!');
+            }
+        } else if (playerChoice === 'paper') {
+            if (computerChoice === 'rock') {
+                console.log('paper covers rock!');
+            }
+            if (computerChoice === 'scissors') {
+                console.log('scissors cuts paper!');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

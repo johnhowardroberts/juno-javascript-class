@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✊🏽, 🤚🏿, ✌🏼</title>
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors Battle!</h1>
+    <p>Open up your console to see the results!</p>
+
+    <script>
+        // Level 1️⃣ Implementation
+
+        // Declare a variable named `playerChoice` and another variable named `computerChoice`
+
+        let playerChoice;
+        let computerChoice; 
+
+
+        // Assign a value of 'rock', 'paper' or 'scissors' to both variables 
+        // (e.g. computer has chosen 'rock' and player has chosen 'paper')
+
+        computerChoice = 'rock';
+        playerChoice = 'rock';
+
+
+        // Using if/else conditional statements, check whether the player has won, lost or tied against the computer and log out the results of the match to the console
+            //HINT: order is important when writing conditionals so consider all the available scenarios for the player (i.e. win, loss, tie) and start your conditional statement with the most specific and/or common outcome first 
+
+        //player has won
+        if (playerChoice == 'rock' && computerChoice == 'scissors') {
+            console.log('player has won!');
+        } else if (playerChoice == 'scissors' && computerChoice == 'paper') {
+            console.log('player has won!');
+        } else if (playerChoice == 'paper' && computerChoice == 'rock') {
+            console.log('player has won!');
+        }
+        // computer wins
+          else if (computerChoice == 'rock' && playerChoice == 'scissors') {
+            console.log('computer has won!');
+        } else if (computerChoice == 'scissors' && playerChoice == 'paper') {
+            console.log('computer has won!');
+        } else if (computerChoice == 'paper' && playerChoice == 'rock') {
+            console.log('computer has won!');
+        }
+        // else tie
+         else {
+            console.log('tie!');
+         }
+
+
+        // Now open this page in your browser and check who won!
+        // To verify that your game is working as expected, try switching the moves made by the player and the computer
+
+
+    </script>
+
+</body>
+
+</html>

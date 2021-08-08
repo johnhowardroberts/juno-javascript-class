@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow exercises</title>
+</head>
+<body>
+    <p>Hello</p>
+
+    <script>
+        console.log("hello world");
+
+        const animal = 'rabbit';
+        const faveAnimal = 'House Hippo';
+
+        if (animal === faveAnimal) {
+            console.log('yay');
+        } else {
+            console.log('nay');
+        }
+
+        // block statements
+
+        const num = 4;
+
+        if (num > 10) {
+            console.log("that'd a big number");
+        } else if (num > 10) {
+            console.log("kind big");
+        } else {
+            console.log("that's a small number!");
+        }
+
+        // block statement 2
+
+        const n = 55;
+
+        if (n > 100) {
+            console.log("That's a big number");
+        } else if (n > 10 ) {
+            console.log("It's kinda big");
+        } else {
+            console.log("It's a small number");
+        }
+
+        // example block statement 3 
+
+        const numOne = 1;
+        const numTwo = 2;
+        const numThree = 3; 
+
+        if (numOne > numTwo && numOne >> numThree) {
+            console.log(`${numOne} is the biggest number!`);
+        } else if (numTwo > numOne && numTwo > numThree) {
+            console.log(`${numTwo} is the biggest number!`);
+        } else {
+            console.log(`${numThree} is the biggest number!`);
+        }
+
+    </script>
+</body>
+</html>
