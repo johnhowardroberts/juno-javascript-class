@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Functions</title>
+</head>
+<body>
+    <script>
+        // alert 
+        // the string is an argument!
+        alert("JS is awesome!");
+
+        // prompt
+        // whatever value you enter in the prompt, js will *return* the value
+        const favPizza = prompt("What is your fave pizza?");
+        console.log(favPizza);
+
+        const greetUser = (username = 'New User') => {
+        console.log(`Hello ${username}! Welcome to my app.`);
+        }
+
+        let username = prompt("What is your name?");
+        // then runs this, with the value entered by the user above
+            // 1) user types input as expected
+            // 2) user does not type into input and clicks OK
+                // !username >>>> empty string is falsey, so !username means "is username false or falsey" so is resolves to true, therefore block will run!
+                // also covers pressing cancel which returns null, which is also falsey 
+            if (!username){
+                let username = prompt("Woah! I need a name! Tell me your name");
+            }
+            // "is username true or truthy?" ->>> answer is yes as long as a string is entered (string is truthy)
+            if (username) {
+              greetUser(username);
+            } else {
+                alert('fine, goodbye!');
+            }
+      
+            // toUpperCase
+            // is a function, so must be called with ()
+
+            const name2 = "Maxine";
+
+            console.log(`Hello ${name2.toUpperCase()}`);
+
+            // toLowerCase
+
+            const name3 = "JOHNNY";
+
+            console.log(`Hello ${name3.toLowerCase()}`);
+
+            // example 
+
+            const user1 = prompt('Who goes there?');
+            
+            // force it to check against the lower case version of whatever was typed in the prompt
+            if (user1.toLowerCase() === "maren") {
+                console.log('Here are your secrets');
+            } else {
+                console.log('GET OUTTA HERE');
+            }
+
+
+            // includes function
+
+            const schoolName = "Juno College of Tech";
+            console.log(schoolName.toLowerCase().includes("juno"));
+
+
+            //parseInt
+
+            // if you enter a number, prompt will always return a string! So you need to convert it into a number
+            const favNum = prompt("what is your fav number?");
+            // parseInt will take the string entered in the prompt into a number, so you can do 10 + favNum without it doing type coercion into a string
+            console.log(10 + parseInt(favNum));
+
+            
+
+
+
+
+    </script>
+</body>
+</html>

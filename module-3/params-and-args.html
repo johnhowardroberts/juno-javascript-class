@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters & Arguments</title>
+</head>
+<body>
+    <script>
+        function sayHello(name) {
+            alert("Hello " + name);
+        }
+
+        sayHello("John");
+
+        const sayHi = (firstName, lastName, age, home) => {
+            if (home === undefined) {
+                home = 'Toronto';
+            }
+            {
+            alert(`Hello ${firstName} ${lastName}, you are ${age} and live in ${home}`);
+        }
+    }
+
+    sayHi('John', 'Roberts', 36);
+
+    // default option, removes the need for an if statement
+
+    const sayHiya = (firstName, lastName, age, home = 'Toronto') => {
+     //       if (home === undefined) {
+     //           home = 'Toronto';
+     //       }
+            alert(`Hello ${firstName} ${lastName}, you are ${age} and live in ${home}`);
+    }
+
+        sayHiya('John', 'Roberts', 36);
+
+        // another example
+
+        const greetUser = (username = 'New User') => {
+        console.log(`Hello ${username}! Welcome to my app.`);
+        }
+
+        greetUser('John');
+        greetUser();
+        greetUser(undefined);
+
+        // 'keeping the order' undefined example
+
+        const logPet = (petName = "Hazel", petType = "Chocolate Lab") => {
+            console.log(`${petName} is a ${petType}`);
+        }
+
+        // undefined makes sure that the default 'Hazel' is used for that parameter, to maintain the order of arguments
+        logPet(undefined, 'bird');
+
+    </script>
+</body>
+</html>
