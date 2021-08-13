@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tip Calc</title>
+</head>
+<body>
+  <script>
+
+  // create a function called tipCalculator that uses three parameters: meal price, Tax Rate, Tip Rate
+  // the function should return a value representing the total bill
+  // have the function default to 13% tax and 15% tip
+  // console.log() a string containing the total bill value
+
+  const tipCalculator = (mealPrice, taxRate = 0.13, tipRate = 0.15) => {
+    const tax = (mealPrice * taxRate);
+    const tip = (mealPrice * tipRate);
+    return mealPrice + tax + tip;
+  }
+
+
+  console.log(`Your bill is $${tipCalculator(100)}`);
+
+  // BONUS: Make the function return a string formatted $x.xx
+    
+  </script>
+</body>
+</html>

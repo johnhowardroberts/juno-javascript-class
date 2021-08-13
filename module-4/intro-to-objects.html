@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // color is a 'sub-category' of the object, or KEY. Then the VALUE on the right 
+        // the type of the property is actually string, so color or "color" will work
+        const apple = {
+            color: "red",
+            size: "medium",
+            sugar: 25,
+
+        }
+
+        // nested objects
+        const clothing = {
+            socks: 34,
+            shoes: 2,
+            tShirts: {
+                small: 3,
+                medium: 56,
+                large: 32
+            }
+        }
+
+        // accessing object values
+
+        // DOT NOTATION 
+
+        console.log(clothing.tShirts.medium);
+
+        // BRACKET NOTATION
+
+        console.log(clothing["tShirts"]);
+
+    </script>
+</body>
+</html>

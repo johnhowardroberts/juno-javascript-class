@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // declared in global scope
+        let dog = "Prudence";
+
+        // also declared in the global scope, everything within in it is available outside
+        const sayHi = () => {
+        console.log(dog);
+        };
+
+        console.log(dog); // Will log out "Prudence"
+        sayHi(); // Will also log out "Prudence"
+
+        // variables declared inside a function have LOCAL scope
+        const hello = () => {
+            let pup = "Prudence";
+            console.log(pup);
+        };
+
+        hello(); // Will log out "Prudence"
+        // console.log(pup); // Will return 'pup is not defined' BECAUSE PUP WAS DECLARED INSIDE THE FUNCTION
+
+
+        // By creating variables globally, we can still access them inside of a function and update their values. 
+
+        let dog2 = "Prudence";
+
+        const hello2 = () => {
+            dog2 = "Hank";
+            console.log(dog2);
+        };
+
+        console.log(dog2); // will log out 'Prudence'
+        hello2(); // will log out 'Hank'
+        console.log(dog2); // will log out 'Hank'
+
+        // another example
+        // The global variable planet is accessible within the function. 
+
+        const planet = "Earth";
+
+        function whereAmI() {
+            console.log(planet);
+        }
+
+        whereAmI(); //logs "Earth"
+
+        // The locally scoped planet variable over-writes the global one. 
+
+        let planet2 = "Earth";
+
+        function whereAmI2() {
+            let planet2 = "Mars";
+            console.log(planet2);
+        }
+
+        whereAmI2(); //logs "Mars"
+
+        // The destination variable is locally scoped to the chooseDestination function and unavailable in the launchRocket function's scope.
+    
+        function chooseDestination() {
+            let destination = "The Moon";
+        }
+
+        function launchRocket() {
+            console.log(destination);
+        }
+
+        chooseDestination();
+        launchRocket(); // gives us an error
+
+    </script>
+</body>
+</html>
